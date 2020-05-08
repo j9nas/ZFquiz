@@ -17,11 +17,15 @@ v0.1 creating startpage and containers
 
 
 To-Do:
-- Factcheck question/answers!!
-- Add more questions!!
+- Factcheck question/answers!
+- Add more questions!
+- input from github!
+- chapter 1 --> koordinaten-transformation/skalierung!
+- chapter 2 --> rotamatrix.xyz --> translationsmatrix
 
+- ergebnisse speichern - anmeldung?!
+- ppt to HTML?
 - Fix right Answer Counter?
 - more Images?
 - Endscreen with some robots?
 - Images copied from UniversalRobot - copyright problem?
-
