@@ -17,11 +17,7 @@ v0.1 creating startpage and containers
 
 
 To-Do:
-- Factcheck question/answers!!
-- Add more questions!!
+chapter 1 - rotationsmatrix
+chapter 2 - 
 
-- Fix right Answer Counter?
-- more Images?
-- Endscreen with some robots?
-- Images copied from UniversalRobot - copyright problem?
 

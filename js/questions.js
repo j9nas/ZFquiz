@@ -171,3 +171,4 @@ function showNextQuestion() {
 function getRightAnswer() {
   return currentQuestion.right;
 }
+

@@ -1,33 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ZFRobotQuiz</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  
-  <body>
-  <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">ZF Robot-Quiz</a>
-              <p class="navbar-text navbar-right" hidden>0 Punkte</p>
-            </div>
-          </div>
-      </nav>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ZFRobotQuiz</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
 
 
-      <div id="start_screen" class="jumbotron quiz_start" >
-        <h1>Willkommen zum Robot-Quiz!</h1>
-        <p><button class="start btn btn-primary btn-lg" role="button">Starten</button></p>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">ZF Robotik</a>
+					<p class="navbar-text navbar-right" hidden>0 Punkte</p>
+				</div>
+			</div>
+		</nav>
+
+		<div id="start_screen" class="jumbotron start_screen">
+			<h1>Willkommen zur Robotik</h1>
+			<p>Bitte wählen sie.</p>
+			<p><button class="chapter1_btn btn btn-primary btn-lg" role="button">Kapitel 1</button>
+		<button class="chapter2_btn btn btn-primary btn-lg" role="button">Kapitel 2</button>
+		<button class="startquiz btn btn-primary btn-lg" role="button">Quiz</button></p>
       </div>
-
 
       <div id="question" class="jumbotron" hidden>
         <h2>Frage <span id="qno"></span></h2>
@@ -39,16 +42,14 @@
 					role="button">C: <span id="answer_c">.</span></button></p></div>
         </div>
 
-
-	<div class="row">
+		<div class="row">
           <div class="col-md-6"><p><button id="answer_b_btn" class="answer btn btn-default btn-lg btn-block" 
 					role="button">B: <span id="answer_b">?</span></button></p></div>
           <div class="col-md-6"><p><button id="answer_d_btn" class="answer btn btn-default btn-lg btn-block" 
 					role="button">D: <span id="answer_d">;</span></button></p></div>
         </div>
     
-
-	<div class="row">
+		<div class="row">
           <div class="col-md-10"></div>
           <div class="col-md-2">
             <p><button id="answer_commit_btn" class="btn btn-primary btn-lg btn-block" 
@@ -60,19 +61,46 @@
       </div>
 
 
+	  <div id="chapter_1" class="jumbotron chapter_1" hidden>
+        <h1>Kapitel 1</h1>
+        <h2>Rotationsmatrix</h2>
+		    <p>Die Rotation eines Körpers im Raum ist ein essentielles Thema für Ingenieure in jeglichen Bereichen. Auch auf Enzyklopedien gibt es einiges über dieses Thema heraus zu finden (<a href="https://de.wikipedia.org/wiki/Eulersche_Winkel">Euler</a>,<a href="https://de.wikipedia.org/wiki/Drehmatrix">Drehmatrix</a>).</br></p>
+        <p>Die wissenschaftliche Theorie, die man über dieses Thema nachlesen kann, ist grenzenlos. Aber um wirklich zu verstehen was passiert, braucht man eine visuelle Veranschaulichung, damit man seine Denkweise daran anpasst.</p></br>
+        <h2>ZYX-Konvention:</h2>
+          <p> bla </p>
+        <h2>Rechte Hand Regel:</h2>
+          <p> bla </p></p>
+        <h2>Koordinatensystem:</h2>
+          <body>
+          <script type="text/javascript" src="coord.js"></script>
+          </body>
+        <h2>Codebeispiel:</h2>
+          <p> bla </p>
+
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+    </div>
+
+<div id="chapter_2" class="jumbotron chapter_2" hidden>
+        <h1>Kapitel 2</h1>
+        <h2>whatever</h2>
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+    </div>
+
+
       <div id="over" class="jumbotron quiz_end" hidden>
         <h1>Das Quiz ist vorbei.</h1>
         <p>Anzahl der richtigen Antworten: <span id="endpoints">0</span> von <span id="possiblepoints">0</span></p>
-        <p><button class="restart btn btn-primary btn-lg" role="button">Nochmal?</button></p>
+        <p><button class="restart btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
       </div>
+	  
   </div>
 
   <center>
   <img src="images/robot.png" width=“260“ height=“260“ alt="robot"></img>
-  </center>
-
-  <center>
-  <img src="images/ur5e.png" width=“260“ height=“260“ alt="robot" hidden></img>
   </center>
 
    	 <!-- jQuery ein muss für bootstrapper java zeug -->
@@ -80,9 +108,14 @@
 
 	<!-- alle addons hier rein -->
   <script src="js/bootstrap.min.js"></script>
+
+  <script src="d3/d3.js"></script>
+  <script src="d3/d3.min.js"></script>
+  <script src="js/coord.js"></script>
   <script src="js/questions.js"></script>
+  <script src="js/chapter1.js"></script>
   <script src="js/script.js"></script>
-  <script https://github.com/j9nas/ZFquiz></script>
+ 
 	<!-- quarantine sucks -->
 </body>
 </html>
