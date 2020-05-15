@@ -17,7 +17,11 @@ v0.1 creating startpage and containers
 
 
 To-Do:
-chapter 1 - rotationsmatrix
-chapter 2 - 
+TCP und Ebenen
+Kamera-Kalibrierung und Einstellungen
+Gelenktypen
+Workspace und Freiheitsgrade
+Bausteine im Roboter GUI
+
 
 

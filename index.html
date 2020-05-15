@@ -12,7 +12,6 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
-
 <body>
 	<div class="container">
 		<nav class="navbar navbar-default">
@@ -25,14 +24,27 @@
 		</nav>
 
 		<div id="start_screen" class="jumbotron start_screen">
-			<h1>Willkommen zur Robotik</h1>
+			<h1>Willkommen zur ZF-Robotik</h1>
 			<p>Bitte wählen sie.</p>
-			<p><button class="chapter1_btn btn btn-primary btn-lg" role="button">Kapitel 1</button>
-		<button class="chapter2_btn btn btn-primary btn-lg" role="button">Kapitel 2</button>
-		<button class="startquiz btn btn-primary btn-lg" role="button">Quiz</button></p>
-      </div>
+			<div class="row">
+				<div class="col-md-3"><p><button class="chapter1_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Rotationsmatrix</button></p></div>
+				<div class="col-md-3"><p><button class="chapter2_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Rechte Hand</button></p></div>
+				<div class="col-md-3"><p><button class="chapter3_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Koordinatensystem</button></p></div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-3"><p><button class="chapter4_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">TCP und Ebenen</button></p></div>
+				<div class="col-md-3"><p><button class="chapter5_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Bausteine im GUI</button></p></div>
+				<div class="col-md-3"><p><button class="chapter6_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Gelenktypen</button></p></div>
+			</div>
+		  
+			<div class="row">
+				<div class="col-md-3"><p><button class="chapter7_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Kamera-Kalibrierung</button></p></div>
+				<div class="col-md-3"><p> <button class="startquiz btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Quiz</button></p></div>
+			</div>
+    </div>
 
-      <div id="question" class="jumbotron" hidden>
+    <div id="question" class="jumbotron" hidden>
         <h2>Frage <span id="qno"></span></h2>
         <p id="question_text">...?</p>
         <div class="row">
@@ -58,8 +70,7 @@
 			role="button" hidden><span id="commit_text" >Nächste Frage</span></button></p>
           </div>
         </div>
-      </div>
-
+    </div>
 
 	  <div id="chapter_1" class="jumbotron chapter_1" hidden>
         <h1>Kapitel 1</h1>
@@ -67,36 +78,93 @@
 		    <p>Die Rotation eines Körpers im Raum ist ein essentielles Thema für Ingenieure in jeglichen Bereichen. Auch auf Enzyklopedien gibt es einiges über dieses Thema heraus zu finden (<a href="https://de.wikipedia.org/wiki/Eulersche_Winkel">Euler</a>,<a href="https://de.wikipedia.org/wiki/Drehmatrix">Drehmatrix</a>).</br></p>
         <p>Die wissenschaftliche Theorie, die man über dieses Thema nachlesen kann, ist grenzenlos. Aber um wirklich zu verstehen was passiert, braucht man eine visuelle Veranschaulichung, damit man seine Denkweise daran anpasst.</p></br>
         <h2>ZYX-Konvention:</h2>
-          <p> bla </p>
-        <h2>Rechte Hand Regel:</h2>
-          <p> bla </p></p>
-        <h2>Koordinatensystem:</h2>
-          <body>
-          <script type="text/javascript" src="coord.js"></script>
-          </body>
-        <h2>Codebeispiel:</h2>
-          <p> bla </p>
-
+          <p>Die Rotationsmatrix besteht aus 3 einzelnen Matrizen, die jeweils für Z-Rotation, Y-Rotation und X-Rotation stehen.</p>
+          <image src="images/rotmat.png"></img>
+          <p>Multipliziert man diese Matrizen miteinander, ergibt sich die finale Rotationsmatrix.</p><br>
         </br></br>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
     </div>
 
-<div id="chapter_2" class="jumbotron chapter_2" hidden>
+
+	<div id="chapter_2" class="jumbotron chapter_2" hidden>
         <h1>Kapitel 2</h1>
-        <h2>whatever</h2>
+        <h2>Rechte Hand Regel:</h2>
+          <p>Die rechte Hand ist, wie in vielen anderen Bereichen der Technik, auch hier ein gutes Werkzeug um Koordinatensysteme schnell zu veranschaulichen.<br>
+          Daumen       - X-Achse <br>
+          Zeigefinger  - Y-Achse <br>
+          Mittelfinger - Z-Achse <br>
+          </p><br>
+          <h2>Drehsinn:</h2>
+          <p>Für den Drehsinn benutzt man auch die rechte Hand, genau wie in der Elektrotechnik.
+          Der Daumen zeigt in Richtung des Vektors und die Richtung der anderen Finger gibt die positive Drehrichtung vor.</p>
         </br></br>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
     </div>
 
+	<div id="chapter_3" class="jumbotron chapter_3" hidden>
+        <h1>Kapitel 3</h1>
+        <h2>Koordiantensystem:</h2>
+        <p>In der Robotik gibt es einige Koordiantensysteme, die man berücksichtigen muss. Es gibt den Bezug zur Basis, zum TCP oder auch zu einer selbst definierten Ebene.<br>
+        Diese Abhängigkeiten sollte man für jeden Fahrbefehl festlegen, damit sich der Roboter nicht auf unerwünschte Weise bewegt.</p><br><br>
+		<p>Drehen Sie immer in der Reihenfolge: 1, 2 und dann 3.<br>
+		Dies dreht das Koordinatensystem um die x-Achse, y-Achse und z-Achse.<br>
+		Mittels 4(x), 5(y) und 6(z) verschieben Sie den Ursprung im Raum.<br>
+		Nach Verschieben/Verdrehen des Koordinatensystems, entfernen Sie den Harken bei "kos", um das Kardan-System einzublenden.
+		</p>
+		<object width="1024" height="700px" data="coordgame.html">
+		</object>
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+	</div>
+
+	<div id="chapter_4" class="jumbotron chapter_4" hidden>
+        <h1>Kapitel 4</h1>
+        <h2>:</h2>
+            
+
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+	</div>
+
+	<div id="chapter_5" class="jumbotron chapter_5" hidden>
+        <h1>Kapitel 5</h1>
+        <h2>:</h2>
+            
+
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+	</div>
+
+	<div id="chapter_6" class="jumbotron chapter_6" hidden>
+        <h1>Kapitel 6</h1>
+        <h2>:</h2>
+            
+
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+	</div>
+
+<div id="chapter_7" class="jumbotron chapter_7" hidden>
+        <h1>Kapitel 7</h1>
+        <h2>:</h2>
+            
+
+        </br></br>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+</div>
 
       <div id="over" class="jumbotron quiz_end" hidden>
         <h1>Das Quiz ist vorbei.</h1>
         <p>Anzahl der richtigen Antworten: <span id="endpoints">0</span> von <span id="possiblepoints">0</span></p>
         <p><button class="restart btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
       </div>
-	  
   </div>
 
   <center>
@@ -108,12 +176,7 @@
 
 	<!-- alle addons hier rein -->
   <script src="js/bootstrap.min.js"></script>
-
-  <script src="d3/d3.js"></script>
-  <script src="d3/d3.min.js"></script>
-  <script src="js/coord.js"></script>
   <script src="js/questions.js"></script>
-  <script src="js/chapter1.js"></script>
   <script src="js/script.js"></script>
  
 	<!-- quarantine sucks -->

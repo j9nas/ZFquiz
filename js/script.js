@@ -2,11 +2,11 @@ $(function() {
   //Hauptfunktion
 });
 
-<!-- fadeIn fadeOut für smoothen übergang -->
+<!-- fadeIn fadeOut für übergang -->
 <!-- ID-Aufruf durch "#name" -->
 <!-- element-klassenaufruf durch ".name" -->
 <!-- einfache fehlerabfrage durch console.log("...") -->
-<!-- callback mit function(){..} in fadeout -->
+<!-- callback mit function(){..} für smoothen fadeout -->
 
 
 <!-- start der einzelnen kapitel durch klick! -->
@@ -25,16 +25,54 @@ $(".chapter2_btn").click(function() {
     startChapter2();
   });
 });
+$(".chapter3_btn").click(function() {
+  $(".start_screen").fadeOut(function() {
+    startChapter3();
+  });
+});
+$(".chapter4_btn").click(function() {
+  $(".start_screen").fadeOut(function() {
+    startChapter4();
+  });
+});
+$(".chapter5_btn").click(function() {
+  $(".start_screen").fadeOut(function() {
+    startChapter5();
+  });
+});
+$(".chapter6_btn").click(function() {
+  $(".start_screen").fadeOut(function() {
+    startChapter6();
+  });
+});
+$(".chapter7_btn").click(function() {
+  $(".start_screen").fadeOut(function() {
+    startChapter7();
+  });
+});
+
 
 function startChapter1(){
   $(".chapter_1").fadeIn();
 }
-
 function startChapter2(){
 	$(".chapter_2").fadeIn();
 }
-
-
+function startChapter3(){
+	$(".chapter_3").fadeIn();
+}
+function startChapter4(){
+	$(".chapter_4").fadeIn();
+}
+function startChapter5(){
+	$(".chapter_5").fadeIn();
+}
+function startChapter6(){
+	$(".chapter_6").fadeIn();
+}
+function startChapter7(){
+	$(".chapter_7").fadeIn();
+}
 
 
 function startQuiz() {
@@ -145,9 +183,25 @@ $(".restart").click(function() {
 $(".restartchapter").click(function() {
   $(".startChapter1").fadeOut();
   $(".startChapter2").fadeOut();
-  $(".chapter_2").fadeOut(function() {
-    $(".chapter_1").fadeOut(function() {
-	    $(".start_screen").fadeIn();
-    });
-  });
+  $(".startChapter3").fadeOut();
+  $("#output_coord").fadeOut();
+  $(".startChapter4").fadeOut();
+  $(".startChapter5").fadeOut();
+  $(".startChapter6").fadeOut();
+  $(".startChapter7").fadeOut();
+  $(".chapter_4").fadeOut(function() {
+	  $(".chapter_5").fadeOut(function() {
+		  $(".chapter_6").fadeOut(function() {
+			  $(".chapter_7").fadeOut(function() {
+				$(".chapter_3").fadeOut(function() {
+					$(".chapter_2").fadeOut(function() {
+						$(".chapter_1").fadeOut(function() {
+						$(".start_screen").fadeIn();
+   });
+ });
+ });
+ });
+});
+ });
+ });
 });
