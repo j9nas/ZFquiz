@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="de">
 
 <head>
 	<meta charset="utf-8">
@@ -17,31 +17,31 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">ZF Robotik</a>
+					<a class="navbar-brand" href="#">ZF-Robotik</a>
 					<p class="navbar-text navbar-right" hidden>0 Punkte</p>
 				</div>
 			</div>
 		</nav>
 
-		<div id="start_screen" class="jumbotron start_screen">
+	<div id="start_screen" class="jumbotron start_screen">
 			<h1>Willkommen zur ZF-Robotik</h1>
-			<p>Bitte wählen sie.</p>
+			<p>Bitte wählen Sie.</p>
 			<div class="row">
 				<div class="col-md-3"><p><button class="chapter1_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Rotationsmatrix</button></p></div>
-				<div class="col-md-3"><p><button class="chapter2_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Rechte Hand</button></p></div>
+				<div class="col-md-3"><p><button class="chapter2_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Rechte Hand Regel</button></p></div>
 				<div class="col-md-3"><p><button class="chapter3_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Koordinatensystem</button></p></div>
 			</div>
-		
 			<div class="row">
 				<div class="col-md-3"><p><button class="chapter4_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">TCP und Ebenen</button></p></div>
 				<div class="col-md-3"><p><button class="chapter5_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Bausteine im GUI</button></p></div>
 				<div class="col-md-3"><p><button class="chapter6_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Gelenktypen</button></p></div>
 			</div>
-		  
 			<div class="row">
 				<div class="col-md-3"><p><button class="chapter7_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Kamera-Kalibrierung</button></p></div>
+				<div class="col-md-3"><p><button class="chapter8_btn btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Singularität</button></p></div>
 				<div class="col-md-3"><p> <button class="startquiz btn btn-primary btn-lg" style="margin:2px;height:45px;width:205px" role="button">Quiz</button></p></div>
-			</div>
+			</div><br>
+			<hr></hr>
     </div>
 
     <div id="question" class="jumbotron" hidden>
@@ -75,13 +75,13 @@
 	  <div id="chapter_1" class="jumbotron chapter_1" hidden>
         <h1>Kapitel 1</h1>
         <h2>Rotationsmatrix</h2>
-		    <p>Die Rotation eines Körpers im Raum ist ein essentielles Thema für Ingenieure in jeglichen Bereichen. Auch auf Enzyklopedien gibt es einiges über dieses Thema heraus zu finden (<a href="https://de.wikipedia.org/wiki/Eulersche_Winkel">Euler</a>,<a href="https://de.wikipedia.org/wiki/Drehmatrix">Drehmatrix</a>).</br></p>
+		<p>Die Rotation eines Körpers im Raum ist ein essentielles Thema für Ingenieure in jeglichen Bereichen. Auch auf Enzyklopedien gibt es einiges über dieses Thema heraus zu finden (<a href="https://de.wikipedia.org/wiki/Eulersche_Winkel">Euler</a>,<a href="https://de.wikipedia.org/wiki/Drehmatrix">Drehmatrix</a>).</br></p>
         <p>Die wissenschaftliche Theorie, die man über dieses Thema nachlesen kann, ist grenzenlos. Aber um wirklich zu verstehen was passiert, braucht man eine visuelle Veranschaulichung, damit man seine Denkweise daran anpasst.</p></br>
-        <h2>ZYX-Konvention:</h2>
-          <p>Die Rotationsmatrix besteht aus 3 einzelnen Matrizen, die jeweils für Z-Rotation, Y-Rotation und X-Rotation stehen.</p>
-          <image src="images/rotmat.png"></img>
-          <p>Multipliziert man diese Matrizen miteinander, ergibt sich die finale Rotationsmatrix.</p><br>
-        </br></br>
+        <h2>XYZ-Konvention</h2>
+        <p>Die Rotationsmatrix besteht aus 3 einzelnen Matrizen, die jeweils für Z-Rotation, Y-Rotation und X-Rotation stehen.</p>
+        <image src="images/rotmat.png"></img>
+        <p>Multipliziert man diese Matrizen miteinander, ergibt sich die finale Rotationsmatrix.</p><br>
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
     </div>
@@ -89,97 +89,174 @@
 
 	<div id="chapter_2" class="jumbotron chapter_2" hidden>
         <h1>Kapitel 2</h1>
-        <h2>Rechte Hand Regel:</h2>
-          <p>Die rechte Hand ist, wie in vielen anderen Bereichen der Technik, auch hier ein gutes Werkzeug um Koordinatensysteme schnell zu veranschaulichen.<br>
-          Daumen       - X-Achse <br>
-          Zeigefinger  - Y-Achse <br>
-          Mittelfinger - Z-Achse <br>
-          </p><br>
-          <h2>Drehsinn:</h2>
-          <p>Für den Drehsinn benutzt man auch die rechte Hand, genau wie in der Elektrotechnik.
-          Der Daumen zeigt in Richtung des Vektors und die Richtung der anderen Finger gibt die positive Drehrichtung vor.</p>
-        </br></br>
+        <h2>Rechte Hand Regel</h2>
+        <p>Die rechte Hand ist, wie in vielen anderen Bereichen der Technik, auch hier ein gutes Werkzeug um Koordinatensysteme schnell zu veranschaulichen.<br>
+        Daumen       - X-Achse<br>
+        Zeigefinger  - Y-Achse<br>
+        Mittelfinger - Z-Achse<br>
+        </p><br>
+        <h2>Drehsinn</h2>
+        <p>Für den Drehsinn benutzt man auch die rechte Hand, genau wie in der Elektrotechnik.
+        Der Daumen zeigt in Richtung des Vektors und die Richtung der anderen Finger gibt die positive Drehrichtung vor.</p>
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
     </div>
 
 	<div id="chapter_3" class="jumbotron chapter_3" hidden>
         <h1>Kapitel 3</h1>
-        <h2>Koordiantensystem:</h2>
+        <h2>Koordiantensystem</h2>
         <p>In der Robotik gibt es einige Koordiantensysteme, die man berücksichtigen muss. Es gibt den Bezug zur Basis, zum TCP oder auch zu einer selbst definierten Ebene.<br>
         Diese Abhängigkeiten sollte man für jeden Fahrbefehl festlegen, damit sich der Roboter nicht auf unerwünschte Weise bewegt.</p><br><br>
 		<p>Drehen Sie immer in der Reihenfolge: 1, 2 und dann 3.<br>
-		Dies dreht das Koordinatensystem um die x-Achse, y-Achse und z-Achse.<br>
-		Mittels 4(x), 5(y) und 6(z) verschieben Sie den Ursprung im Raum.<br>
-		Nach Verschieben/Verdrehen des Koordinatensystems, entfernen Sie den Haken bei "kos", um das Kardan-System einzublenden.
+		Mittels 4(x), 5(y) und 6(z) verschieben Sie den Ursprung global im Raum.<br>
+		Nach Verschieben/Verdrehen des Koordinatensystems, entfernen Sie den Haken bei "kos", um das Kardan-System einzublenden.<br><br>
+		Hier wird um die jeweilige Achse rotiert.
 		</p>
-		<object width="1024" height="700px" data="coordgame.html">
+		<object width="800px" height="600px" data="coordgame.html">
 		</object>
-		<p>Getestet und funktionstüchtig unter Chrome 81.3.</p>
-        </br></br>
+		<p>Getestet und funktionstüchtig unter Google Chrome(version 81.3)</p>
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
 	</div>
 
 	<div id="chapter_4" class="jumbotron chapter_4" hidden>
         <h1>Kapitel 4</h1>
-        <h2>:</h2>
-            
-
-        </br></br>
+        <h2>TCP</h2>
+        <p>Der TCP (tool center point) stellt den vordersten Punkt des Roboterarms, den Flansch, dar.
+          Wenn ein Effektor montiert ist, muss der TCP anhand dessen kalibriert werden.
+		  Der TCP ist der Hauptreferenzpunkt des Roboters und anhand dessen, werden z.b. Wegpunkte gespeichert.<br>
+		  Bei Schweiswerkzeug ist dies der Aufsetzpunkt und bei Greifern ist es der Mittelpunkt der Verbindungslinie der Greiferbacken.<br><br>
+		<h2>Ebenen</h2>
+		  <p>Die Ebenen, die man selbst festlegen kann, können auf viele Weisen benutzt werden.
+		  Sie können benutzt werden, um Wegpunkte im Bezug auf die Ebene festzulegen, aber auch als Sicherheitsebenen.
+		  Sicherheitsebenen stellen eine 'Barriere' dar, die der Roboter nicht durchstoßen soll. Dies kann man auf einige Arten festlegen.<br>
+		  •"Normal" → kein Durchgang des TCP/Ellbogen möglich im normalen Betrieb<br>
+		  •"Reduziert" → kein Durchgang des TCP/Ellbogen möglich im reduzierten Betrieb<br>
+		  •"Beides" → kein Durchgang des TCP/Ellbogen möglich<br>
+		  •"Auslöser Reduzierter Modus" → beim Durchgang der Ebene wird in den Reduzierten Modus umgeschaltet<br><br>
+		  <img src="images/ebenen.png" heigth="1000" width="700"></img>
+        </p>            
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
 	</div>
 
 	<div id="chapter_5" class="jumbotron chapter_5" hidden>
         <h1>Kapitel 5</h1>
-        <h2>:</h2>
-            
-
-        </br></br>
+        <h2><b>Bausteine im GUI</b></h2>
+        <p><h2>Unterprogramm-Baustein</h2>
+		Erstellen eines neuen Unterprogramm muss in die oberste Programmebene.<br>
+		Aufrufbar an beliebiger Stelle im Roboterprogramm; nützlich für häufig gebrauchte Programmsequenzen.<br>
+		Dieser Abschnitt wird auch nur einmal durchlaufen. <br><br>
+		<h2>Thread-Baustein</h2>
+		Parallellaufendes Programm; Startet mit Hauptprogramm (nicht mit der Vor-Start-Sequenz). <br>
+		nützlich um in eine Variable einen aktuellen Wert zu schreiben (z.B. Force/TCP Position).<br>
+		Am Ende vom Thread sync() (mittels Baustein „Script“) oder wait-Befehl einfügen.<br><br>
+		<h2>Event-Baustein</h2>
+		Ähnlich wie Thread, startet jedoch erst, wenn die definierte Bedingung erfüllt ist.<br><br>
+	    <h2>If-Baustein</h2>
+		Funktioniert mit der gleichen Logig wie das "if" bei jeder Programmiersprache.<br>
+		Else kann leer gelassen werden und es sind beliebig viele elseif-Blöcke einfügbar.<br>
+		<img src="images/if.png" heigth="400" width="200"></img>
+		<h2>Schleife-Baustein</h2>
+		Um eine Schleife zu kreieren kann man die gängigen Befehle "for" und "while" benutzen.<br>
+		Je nach Bedingungen für diese Schleifen, kann man auch Endlosschleifen programmieren.<br>
+		<img src="images/schleife.png" heigth="400" width="200"></img>
+		<h2>Switch-Case</h2>
+		Fälle (Cases) dürfen nur Integer-Werte sein<br>
+		<img src="images/switch case.png" heigth="400" width="200"></img>
+		<h2>Kraft-Baustein</h2>
+		Hier fährt der Roboter auf Kollision, bis er auf eine gewisse Widerstandskraft trifft.
+		In dem Baustein kann man Richtung und Geschwindigkeit festlegen.<br>
+		Kaftfahrten sollte man mit einer Schleife mit eindeutiger Bedingung koppeln, damit der Roboter auch wieder auf gewünschte Weise aufhört oder dort stoppt, wie man es will<br>
+		Der Modus "Rahmen" wird empfohlen, da dieser angenehm zu konfigurieren ist.<br>
+		ACHTUNG: Kraftbefehle innerhalb einer Endlosschleife führen zu Problemen!<br><br>
+		<img src="images/kraft.png" heigth="1000" width="700"></img>
+		</p>
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
 	</div>
 
 	<div id="chapter_6" class="jumbotron chapter_6" hidden>
         <h1>Kapitel 6</h1>
-        <h2>:</h2>
-            
-
-        </br></br>
+        <h2>Gelenktypen</h2>
+        <p>Gelenke verbinden die verschiedenen Armteile des Roboters und das typischerweise translatorisch (prismatic) oder rotatorisch (revolute). <br>
+		Es gibt noch Revolvergenke, welche auf eine besondere Art drehen, jedoch sind diese selten verbaut.<br>
+		Je nach dem wie man diese Gelenke miteinander verkettet, erreicht man unterschiedliche Freiheitsgrade in dem Roboterarm. <br>
+		Der Roboter kann bis zu 6 Freiheitsgraden haben.<br><br>
+		• Translatorisches Gelenk: erlaubt eine relative, lineare Bewegung zwischen zwei Armteilen.<br>
+		• Rotatorisches Gelenk: erlaubt eine relative, rotatorische Bewegung zwischen zwei Armteilen.<br><br>
+		<img src="images/gelenktypen.png"></img>
+		</p>
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
 	</div>
 
-<div id="chapter_7" class="jumbotron chapter_7" hidden>
+	<div id="chapter_7" class="jumbotron chapter_7" hidden>
         <h1>Kapitel 7</h1>
-        <h2>:</h2>
-            
-
-        </br></br>
+        <h2>Kamera-Kalibrierung</h2>
+        <p>Um eine Kamera zu kalibrieren, schließt man diese mit Ethernet-Kabel an den PC oder einen Microcontroller.<br>
+		Nach der Verbindung mit den richtigen IPs und der Installation der dazugehörigen Software, kann die Kamera mittels Smartgrid kalibrieren.<br> 
+		Dies berechnet die Abhängigkeit zwischen Roboterkoordinaten und Kamerakoordinaten.<br>
+		Wenn die Kamera ein Objekt erkennt und dessen Koordinaten hat, werden diese in die Koordinaten des Roboters umgerechnet und der TCP kann sich durch einen Fahrbefehl dort hinbewegen.<br>
+		
+		</p>
+        </br></br><hr></hr>
         <p>Für den Startbildschirm, bitte Klicken.</p>
         <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
-</div>
+	</div>
 
-      <div id="over" class="jumbotron quiz_end" hidden>
+
+	<div id="chapter_8" class="jumbotron chapter_8" hidden>
+        <h1>Kapitel 8</h1>
+        <h2>Singularität</h2>
+        <p>Das Wort "Singularität" hat viele Bedeutungen, doch in die Robotik steht es für ein Problem, welches  jeden Roboter betrifft.<br><br>
+		Die Bewegung des Roboterwerkzeuges per inverser Kinematik führt zu einigen Besonderheiten. Während sich aus einer bestimmten Stellung der Achsen eindeutig eine Position 
+		des Werkzeuges ergibt, ist die Stellung der Achsen für eine bestimmte Werkzeuglage nicht immer eindeutig.<br><br>
+		Das System ist rechnerisch mehrdeutig.<br><br>
+		Je nach Lage des Zielpunktes und der Mechanik des Roboters gibt es oft mehrere Achskonfigurationen, die zur gewünschten Werkzeugposition führen. 
+		Die Auswahl der geeignetsten Konfiguration ist Aufgabe des Programmierers. <br><br>
+		Die Steuerung muss dann sicherstellen, dass diese Konfiguration während der Bewegung möglichst lange beibehalten wird.
+		Der Wechsel zwischen zwei Konfigurationen kann sonst dazu führen, dass für eine minimale Werkzeugbewegung eine sehr große Bewegung des gesamten Roboters stattfindet. 
+		Diese unerwartete Bewegung kostet Zeit und ist oft nicht kollisionsfrei möglich.<br><br>
+		Bei manchen Roboterkinematiken (z. B. 6-achsiger Gelenkarmroboter) gibt es Raumpunkte, die zu sogenannten Singularitäten führen. <br>
+		Eine Singularität ist dadurch gekennzeichnet und erkennbar, dass zwei Achsen des Roboters kollinear (fluchtend) sind. <br><br></p>
+		<h2>Beispiele</h2>
+		<p>Eine typische Konfiguration mit Singularität ist die Überkopfstellung des Werkzeuges. Hier fluchten Achse 1 und Achse 6. Die Steuerung kann eine auszuführende 
+		Rotation um die Senkrechte nicht eindeutig Achse 1 oder Achse 6 zuordnen. <br><br>
+		Eine andere Konstellation ist beim Nulldurchgang der Achse 5 gegeben. <br>
+		Hier fluchten Achse 4 und Achse 6. Hier gibt es unendlich viele Achsstellungen, die zur gleichen Werkzeugstellung führen bzw. Bewegungsbahnen, 
+		bei denen mehrere Achsen mit unendlicher Geschwindigkeit gegeneinander bewegt werden müssten. <br><br>
+		Einige Steuerungen brechen das Programm sicherheitshalber beim Durchfahren eines solchen Punktes ab.<br><br>
+		Anbei ein Video, wechles die Problematik sehr gut veranschaulicht.</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/6Wmw4lUHlX8?start=10" frameborder="0" allow="accelerometer; 
+		encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </br></br><hr></hr>
+        <p>Für den Startbildschirm, bitte Klicken.</p>
+        <p><button class="restartchapter btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
+	</div>
+	
+    <div id="over" class="jumbotron quiz_end" hidden>
         <h1>Das Quiz ist vorbei.</h1>
         <p>Anzahl der richtigen Antworten: <span id="endpoints">0</span> von <span id="possiblepoints">0</span></p>
         <p><button class="restart btn btn-primary btn-lg" role="button">Startbildschirm</button></p>
-      </div>
+    </div>
   </div>
 
   <center>
   <img src="images/robot.png" width=“260“ height=“260“ alt="robot"></img>
   </center>
 
-   	 <!-- jQuery ein muss für bootstrapper java zeug -->
+   	<!-- jQuery ein muss für bootstrapper java zeug -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 	<!-- alle addons hier rein -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/questions.js"></script>
   <script src="js/script.js"></script>
- 
 	<!-- quarantine sucks -->
 </body>
 </html>

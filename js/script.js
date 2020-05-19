@@ -50,6 +50,11 @@ $(".chapter7_btn").click(function() {
     startChapter7();
   });
 });
+$(".chapter8_btn").click(function() {
+  $(".start_screen").fadeOut(function() {
+    startChapter8();
+  });
+});
 
 
 function startChapter1(){
@@ -72,6 +77,9 @@ function startChapter6(){
 }
 function startChapter7(){
 	$(".chapter_7").fadeIn();
+}
+function startChapter8(){
+	$(".chapter_8").fadeIn();
 }
 
 
@@ -189,6 +197,8 @@ $(".restartchapter").click(function() {
   $(".startChapter5").fadeOut();
   $(".startChapter6").fadeOut();
   $(".startChapter7").fadeOut();
+  $(".startChapter8").fadeOut();
+  $(".chapter_8").fadeOut(function() {
   $(".chapter_4").fadeOut(function() {
 	  $(".chapter_5").fadeOut(function() {
 		  $(".chapter_6").fadeOut(function() {
@@ -200,6 +210,7 @@ $(".restartchapter").click(function() {
    });
  });
  });
+  });
  });
 });
  });

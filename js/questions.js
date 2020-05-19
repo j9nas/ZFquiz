@@ -131,7 +131,7 @@ var questions = [
       "A":"Fehlerbehebung",
       "B":"Prozessoptimierung",
       "C":"Kollisionsverhinderung",
-      "D":""
+      "D":"Präzision"
     }, 
     "right":"B"
   },{
